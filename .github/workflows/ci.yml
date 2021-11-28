@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - if: ${{ matrix.os == 'ubuntu' }}
-        run: sudo apt-get install portaudio19-dev python3-dev
+        run: sudo apt-get update && sudo apt install -y portaudio19-dev python3-dev
       - if: ${{ matrix.os == 'macos' }}
         run: brew install portaudio
       - uses: actions/setup-python@v2
